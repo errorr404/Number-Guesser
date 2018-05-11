@@ -76,6 +76,30 @@ guessInput.style.borderColor = 'green';
 setMessage('${winnigNum} is correct,you Win!','green');
 }
 else{
+// wrong number
+guessleft -= 1;
+if(guessleft===0){
+  // Game over -lost
+// disable the input
+guessInput.disabled = true;
+// change the border color
+guessInput.style.borderColor = 'red';
+//set messege
+setMessage('You lost.. the correct number was ${winningNum}','red');
+
+}
+else {
+// Game continue - answer wrong
+// disable the inout
+guessInput.disabled = false;
+// change the border color
+guessInput.style.borderColor = 'red';
+//set messege
+setMessage('you have ${guessleft} guess Left','red');
+// clear input
+guessInput.value = '';
+
+}
 
 }
 
