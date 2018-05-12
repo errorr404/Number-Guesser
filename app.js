@@ -63,8 +63,9 @@ maxNum.textContent = max;
 guessBtn.addEventListener('click',function(){
 let guess = parseInt(guessInput.value);
 //validate
-if(isNaN(guess) || guess< min|| guess> max){
-  setMessage('Please enter a number between ${min} and ${max}', 'red')
+if(isNaN(guess) || guess< min|| guess> max)
+{
+  setMessage('Please enter a number between ${min} and ${max}', 'red');
 }
 // check if won
 if(guess === winnigNum){
