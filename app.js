@@ -65,7 +65,7 @@ let guess = parseInt(guessInput.value);
 //validate
 if(isNaN(guess) || guess< min|| guess> max)
 {
-  setMessage('Please enter a number between ${min} and ${max}', 'red');
+  setMessage(`Please enter a number between ${min} and ${max}`, 'red');
 }
 // check if won
 if(guess === winnigNum){
@@ -74,19 +74,19 @@ guessInput.disabled = true;
 // change the border color
 guessInput.style.borderColor = 'green';
 //set messege
-setMessage('${winnigNum} is correct,you Win!','green');
+setMessage(`${winnigNum} is correct,you Win!`,'green');
 }
 else{
 // wrong number
 guessleft -= 1;
-if(guessleft===0){
+if(guessleft === 0 ){
   // Game over -lost
 // disable the input
 guessInput.disabled = true;
 // change the border color
 guessInput.style.borderColor = 'red';
 //set messege
-setMessage('You lost.. the correct number was ${winningNum}','red');
+setMessage(`You lost.. the correct number was ${winningNum}`,'red');
 
 }
 else {
@@ -96,7 +96,7 @@ guessInput.disabled = false;
 // change the border color
 guessInput.style.borderColor = 'red';
 //set messege
-setMessage('you have ${guessleft} guess Left','red');
+setMessage(`you have ${guessleft} guess Left`,'red');
 // clear input
 guessInput.value = '';
 
